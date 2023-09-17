@@ -1,0 +1,72 @@
+/* h1
+{
+    position: fixed;
+    margin-left: 300px;
+    margin-top: 500px;
+} */
+header
+{
+    position: relative;
+}
+span :not(.typed-strings)
+{
+    display: block;
+    position: relative;
+    padding-left: auto;
+    margin-right: auto;
+}
+
+#typed-strings,
+{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+footer
+{
+    position: relative;
+    margin-top: 150px;
+}
+
+.education_header
+{
+    margin-top: 70px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 3px black;
+}
+
+a[href="http://www.isletme.hacettepe.edu.tr/"], #hacettepe_desc, #rutgers_desc, #exchange_desc
+{
+    text-align: center;
+    font-family: "Monospace";
+    font-size: 14pt;
+}
+
+
+.desc
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 20px;
+    font-family: "Fantasy";
+    color: red;
+}
+
+#profile_photo
+{
+
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 130px;
+    width: 130;
+    border-radius: 50%;
+    /* border: 0.2px solid black; */
+}
+

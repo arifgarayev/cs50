@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function btnClick(event){
+                var trigger = event.srcElement;
+
+                const p = document.createElement('p');
+                const incorrect = document.createTextNode("Incorrect");
+                const correct = document.createTextNode("Correct!");
+
+                if (trigger.id == 1)
+                {
+                    for (elem of document.getElementsByTagName('button'))
+                    {
+
+                        elem.style.backgroundColor = null;
+                    }
+                    document.getElementById("1").style.backgroundColor = 'red';
+                    p.appendChild(incorrect);
+                    p.setAttribute('class', 'incorrect');
+
+                    if (!document.querySelector(".incorrect")  && !document.querySelector(".correct"))
+                    {
+
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                    else
+                    {
+                        document.querySelector(".part_1").removeChild(document.querySelector(".correct"));
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+
+
+
+                }
+
+                else if (trigger.id == 2)
+                {
+                    for (elem of document.getElementsByTagName('button'))
+                    {
+                        elem.removeAttribute('style');
+                    }
+                    document.getElementById("2").style.backgroundColor = 'red';
+                    p.appendChild(incorrect);
+                    p.setAttribute('class', 'incorrect');
+
+                    if (!document.querySelector(".incorrect")  && !document.querySelector(".correct"))
+                    {
+
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                    else
+                    {
+                        document.querySelector(".part_1").removeChild(document.querySelector(".correct"));
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                }
+                else if (trigger.id == 3)
+                {
+                    for (elem of document.getElementsByTagName('button'))
+                    {
+                        elem.removeAttribute('style');
+                    }
+                    document.getElementById("3").style.backgroundColor = 'red';
+                    p.appendChild(incorrect);
+                    p.setAttribute('class', 'incorrect');
+
+                    if (!document.querySelector(".incorrect")  && !document.querySelector(".correct"))
+                    {
+
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                    else
+                    {
+                        document.querySelector(".part_1").removeChild(document.querySelector(".correct"));
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                }
+                else if (trigger.id == 4)
+                {
+                    for (elem of document.getElementsByTagName('button'))
+                    {
+                        elem.removeAttribute('style');
+                    }
+                    document.getElementById("4").style.backgroundColor = 'red';
+                    p.appendChild(incorrect);
+                    p.setAttribute('class', 'incorrect');
+
+                    if (!document.querySelector(".incorrect") && !document.querySelector(".correct"))
+                    {
+                        // console.log(document.querySelector(".part_1").childNodes);
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                    else
+                    {
+                        document.querySelector(".part_1").removeChild(document.querySelector(".correct"));
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                }
+                else if (trigger.id == 5)
+                {
+                    for (elem of document.getElementsByTagName('button'))
+                    {
+                        elem.removeAttribute('style');
+                    }
+                    document.getElementById("5").style.backgroundColor = 'green';
+                    p.appendChild(correct);
+                    p.setAttribute('class', 'correct');
+
+                    if (!document.querySelector(".correct") && !document.querySelector(".incorrect"))
+                    {
+                        // console.log(document.querySelector(".part_1").childNodes);
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                    else
+                    {
+                        document.querySelector(".part_1").removeChild(document.querySelector(".incorrect"));
+                        document.querySelector(".part_1").appendChild(p);
+                    }
+                }
+
+
+
+
+            }
+
+            function webForm(event)
+            {
+                var input_txt = document.getElementById('input_answer');
+                const p = document.createElement('p');
+                const incorrect = document.createTextNode("Incorrect");
+                const correct = document.createTextNode("Correct!");
+
+                if (input_txt.value.toLowerCase() == 'switzerland')
+                {
+                    p.appendChild(correct);
+                    p.setAttribute('class', 'correct2');
+                    input_txt.style.backgroundColor = 'green';
+
+                    if (!document.querySelector(".correct2") && !document.querySelector(".incorrect2"))
+                    {
+                        // console.log(document.querySelector(".part_1").childNodes);
+                        document.querySelector(".part_2").appendChild(p);
+                    }
+                    else
+                    {
+                        document.querySelector(".part_2").removeChild(document.querySelector(".incorrect2"));
+                        document.querySelector(".part_2").appendChild(p);
+                    }
+
+                }
+                else if ((input_txt.value).length == 0)
+                {
+                    input_txt.style.backgroundColor = null;
+                }
+                else
+                {
+                    p.appendChild(incorrect);
+                    p.setAttribute('class', 'incorrect2');
+                    input_txt.style.backgroundColor = 'red';
+                    if (!document.querySelector(".correct2") && !document.querySelector(".incorrect2"))
+                    {
+                        // console.log(document.querySelector(".part_1").childNodes);
+                        document.querySelector(".part_2").appendChild(p);
+                    }
+                    else
+                    {
+                        document.querySelector(".part_2").removeChild(document.querySelector(".correct2"));
+                        document.querySelector(".part_2").appendChild(p);
+                    }
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2 class="part_1">Part 1: Multiple Choice </h2>
+                <hr>
+                <h3> What is the approximate ratio of people to sheep in New Zeland? </h3>
+                <!-- <form> -->
+                <button type="button" id="1" onclick="btnClick(event);">6 people per 1 sheep</button>
+                <button type="button" id="2" onclick="btnClick(event);">3 people per 1 sheep</button>
+                <button type="button" id="3" onclick="btnClick(event);">1 person per 1 sheep</button>
+                <button type="button" id="4" onclick="btnClick(event);">1 person per 3 sheep</button>
+                <button type="button" id="5" onclick="btnClick(event);"s>1 person per 6 sheep</button>
+                <!-- </form> -->
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h2 class="part_2">In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h2>
+                <!-- TODO: Add free response question here -->
+
+                <form onsubmit="return webForm(this)">
+                    <input type="text" id="input_answer"></input>
+                    <input type="submit" id="submit"></input>
+                </form>
+
+            </div>
+        </div>
+    </body>
+</html>

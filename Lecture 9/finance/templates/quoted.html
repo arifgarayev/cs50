@@ -1,0 +1,40 @@
+<style>
+table, th, td {
+    border: 1px solid black !important;
+    border-collapse: collapse !important;
+    width: 50%;
+    height: 20%;
+    text-align: center;
+}
+
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+</style>
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <!-- style="margin-left: auto; margin-right: auto;" -->
+        <table class="center">
+            <tr>
+                <th> Name </th>
+                <th> Price </th>
+                <th> Symbol </th>
+            </tr>
+            <tr>
+                <td>{{name}}</td>
+                <td>{{price}}</td>
+                <td>{{symbol}}</td>
+            </tr>
+        </table>
+
+
+
+{% endblock %}

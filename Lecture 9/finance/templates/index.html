@@ -1,0 +1,65 @@
+<style>
+table, th, td {
+    border: 1px solid black !important;
+    border-collapse: collapse !important;
+    width: 70%;
+    height: 30%;
+    text-align: center;
+}
+
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+</style>
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    {% if is_buy %}
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Username</th>
+                <th>Symbol</th>
+                <th>No of shares</th>
+                <th>Current share price</th>
+                <th>Total value</th>
+                <th>Current cash balance</th>
+                <th>Total stocks value </th>
+                <th>Subtotal</th>
+            </tr>
+            </thead>
+            {% for ans in ans_to_iter %}
+
+            <tr>
+                {% if loop.index == 1%}
+                    <td rowspan="{{ans_to_iter | length}}"> {{ username }} </td>
+                {% endif %}
+                <td> {{ ans['symbol'] }}</td>
+                <td> {{ ans['no_of_shares'] }}</td>
+                <td> {{ usd_func(ans['current_share_price']) }}</td>
+                <td> {{ usd_func(ans['total_value']) }}</td>
+                {% if loop.index == 1%}
+                    <td rowspan="{{ans_to_iter | length}}"> {{ current_cash_balance }}</td>
+                    <td rowspan="{{ans_to_iter | length}}"> {{ total_stock_value }}</td>
+                    <td rowspan="{{ans_to_iter | length}}"> {{ subtotal }}</td>
+                {% endif %}
+            </tr>
+
+
+            {% endfor %}
+
+
+        </table>
+    {% else %}
+
+        <p> You haven't bought any shares. Your balance is {{ balance }}</p>
+
+    {% endif %}
+{% endblock %}

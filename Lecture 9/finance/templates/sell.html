@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    {% if is_active %}
+
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <label for="symbol"> Choose a stock to sell: </label>
+                <select name="symbol" class="form-select mx-auto w-auto">
+                    <option disabled selected>Symbol</option>
+                    {% for active_symbol in active_symbols %}
+                        <option class="form-control mx-auto w-auto" name="symbol" value="{{active_symbol['symbol']}}"> {{active_symbol['symbol']}} </option>
+                    {% endfor %}
+                </select>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Qunatity" type="number" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+
+    {% else %}
+         <p> You don't have any active shares. Your balance is {{ balance }}</p>
+    {% endif %}
+{% endblock %}
+
+
+
+<!-- <form action="/sell" method="post">
+    <div class="mb-3">
+        <label for="symbol"> Choose a stock to sell: </label>
+            <select name="symbol">
+                {% for active_symbol in active_symbols %}
+                    <option class="form-control mx-auto w-auto" name="symbol" value="{{active_symbol['symbol']}}"> {{active_symbol['symbol']}} </option>
+                {% endfor %}
+            </select>
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Qunatity" type="number" min="1">
+    </div>
+    <button class="btn btn-primary" type="submit">Buy</button>
+</form> -->
