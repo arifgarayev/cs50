@@ -25,7 +25,7 @@
 
 ## Languages Used
 
-The course covers a variety of programming languages, each spanning a different number of weeks:
+The course covers programming languages like C, Python and JavaScript:
 
 - **C** ~ 5 weeks
 - **Python** ~ 4 weeks
@@ -36,7 +36,7 @@ The course covers a variety of programming languages, each spanning a different 
 
 ## Contributing
 
-You are welcome to contribute! Whether it's fixing a bug, improving documentation, or adding your own solutions, your input is valuable.
+You are welcome to contribute! Whether it's fixing a bug, improving documentation, or adding your own solutions. Your input is valuable.
 
 ---
 
