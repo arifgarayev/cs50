@@ -10,20 +10,20 @@
 
 
 
-```CS50x 2022``` - Harvard's open-source course, taught by Professor David J. Malan. Here, you will find a collection of scripts from the lectures, along with solutions to both advanced homework assignments and laboratory assignments.
+```CS50x 2022``` - Harvard's open-source course, taught by Professor David J. Malan. Here, you will find scripts from the lectures, along with solutions to advanced homework assignments and laboratory assignments.
 
 ---
 
-## Table of Contents
+## Contents
 
-- [Languages Used](#languages-used)
+- [Languages](#languages-used)
 - [Contributing](#contributing)
-- [Contact Information](#contact-information)
+- [Contact](#contact-information)
 - [License](#license)
 
 ---
 
-## Languages Used
+## Languages
 
 The course covers programming languages like C, Python and JavaScript:
 
@@ -40,7 +40,7 @@ You are welcome to contribute! Whether it's fixing a bug, improving documentatio
 
 ---
 
-## Contact Information
+## Contact
 
 If you have any questions, suggestions, or just want to connect, feel free to reach out to me on LinkedIn:
 
