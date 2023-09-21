@@ -8,7 +8,8 @@
   <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQGYjmmBCvqLmg/company-logo_200_200/0/1519878692497?e=2159024400&v=beta&t=6drmiSV8aOH5AE1iw7KUmWvXoRTnvdhQkjybRquJwyU" />
 </p>
 
-
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue.svg)](https://linkedin.com/in/garayevarif/)
 
 ```CS50x 2022``` - Harvard's open-source course, taught by Professor David J. Malan. Here, you will find scripts from the lectures, along with solutions to advanced homework assignments and laboratory assignments.
 
